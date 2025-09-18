@@ -1,0 +1,124 @@
+Great! Here's a **concise and clear breakdown** of each topic you asked for, grouped by category:
+
+---
+
+### **SELENIUM**
+
+**1. `WebDriver.findElement` vs `WebElement.findElement`:**
+- `WebDriver.findElement`: Finds an element from the entire DOM.
+- `WebElement.findElement`: Finds a child element within a specific parent element.
+
+**2. Locators Supported in Selenium:**
+- `id`
+- `name`
+- `className`
+- `tagName`
+- `linkText`
+- `partialLinkText`
+- `cssSelector`
+- `xpath`
+
+**3. Soft vs Hard Assertion:**
+- **Hard Assertion**: Stops test execution if assertion fails.
+- **Soft Assertion**: Continues execution even if assertion fails; reports all failures at the end.
+
+---
+
+### **JAVA**
+
+**1. `StringBuffer` vs `StringBuilder`:**
+- Both are mutable.
+- `StringBuffer` is **thread-safe** (synchronized).
+- `StringBuilder` is **faster** but **not thread-safe**.
+
+**2. `this` vs `super`:**
+- `this`: Refers to current class instance.
+- `super`: Refers to parent class instance.
+
+**3. Array vs ArrayList:**
+- **Array**: Fixed size, can store primitives.
+- **ArrayList**: Dynamic size, stores objects only.
+
+**4. Abstract Class vs Interface:**
+- **Abstract Class**: Can have method implementations and constructors.
+- **Interface**: Only method signatures (Java 8+ allows default/static methods).
+
+**5. Streams Example:**
+```java
+List<String> names = Arrays.asList("Shekar", "Vijay", "Srinivas");
+names.stream().filter(n -> n.startsWith("S")).forEach(System.out::println);
+```
+
+---
+
+### **API (Rest Assured)**
+
+**1. PUT vs POST:**
+- **POST**: Creates a new resource.
+- **PUT**: Updates or replaces an existing resource.
+
+**2. Common HTTP Methods:**
+- GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
+
+**3. JSON Serialization & Deserialization:**
+- **Serialization**: Java object → JSON
+- **Deserialization**: JSON → Java object
+
+**4. Common JSON Parsing Techniques:**
+- `JsonPath`
+- POJO classes
+- `JSONObject` / `JSONArray`
+- GSON / Jackson libraries
+
+**5. Deserialization using POJO:**
+```java
+ObjectMapper mapper = new ObjectMapper();
+User user = mapper.readValue(response.asString(), User.class);
+```
+
+---
+
+### **JENKINS**
+
+**1. What is Jenkins?**
+- An open-source automation server for CI/CD.
+
+**2. CI vs CD vs CD (Deployment):**
+- **CI (Continuous Integration)**: Code integration and testing.
+- **CD (Continuous Delivery)**: Automated release to staging.
+- **CD (Continuous Deployment)**: Automated release to production.
+
+**3. Jenkins Pipeline:**
+- A script that defines stages of build, test, and deploy.
+
+**4. Scripted vs Declarative Pipeline:**
+- **Scripted**: Groovy-based, more flexible.
+- **Declarative**: Simpler syntax, structured.
+
+**5. Sample Declarative Pipeline Script:**
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
+```
+
+---
+
+Would you like flashcards, mock questions, or a quiz format to help you revise
